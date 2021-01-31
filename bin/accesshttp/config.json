@@ -1,0 +1,43 @@
+{
+  "debug": true,
+  "process": {
+    "file_limit": 10000,
+    "core_limit": 100000
+  },
+  "log": {
+    "path": "/Users/aeneas/Github/exchange/viabtc-server-mac/bin/accesshttp/log",
+    "flag": "fatal,error,warn,info,debug,trace",
+    "num": 10
+  },
+  "alert": {
+    "host": "accesshttp",
+    "addr": "127.0.0.1:4444"
+  },
+  "svr": {
+    "name": "accesshttp_http_server",
+    "bind": ["tcp@0.0.0.0:8080"],
+    "max_pkg_size": 10240
+  },
+  "monitor": {
+    "name": "accesshttp_monitor",
+    "bind": "tcp@0.0.0.0:8081",
+    "max_pkg_size": 10240
+  },
+  "worker_num": 1,
+  "timeout": 1.0,
+  "matchengine": {
+    "name": "matchengine_clt",
+    "addr": ["tcp@127.0.0.1:7316"],
+    "max_pkg_size": 10240
+  },
+  "marketprice": {
+    "name": "marketprice_clt",
+    "addr": ["tcp@127.0.0.1:7416"],
+    "max_pkg_size": 10240
+  },
+  "readhistory": {
+    "name": "readhistory_clt",
+    "addr": ["tcp@127.0.0.1:7424"],
+    "max_pkg_size": 10240
+  }
+}

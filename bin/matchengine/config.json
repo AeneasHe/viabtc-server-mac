@@ -1,0 +1,237 @@
+{
+  "debug": true,
+  "process": {
+    "file_limit": 10000,
+    "core_limit": 100000
+  },
+  "log": {
+    "path": "/Users/aeneas/Github/exchange/viabtc-server-mac/bin/matchengine/log",
+    "flag": "fatal,error,warn,info,debug,trace",
+    "num": 10
+  },
+  "alert": {
+    "host": "matchengine",
+    "addr": "127.0.0.1:4444"
+  },
+  "svr": {
+    "name": "matchengine",
+    "bind": ["tcp@0.0.0.0:7316", "udp@0.0.0.0:7316"],
+    "buf_limit": 100,
+    "max_pkg_size": 10240,
+    "heartbeat_check": false
+  },
+  "cli": "tcp@127.0.0.1:7317",
+  "db_log": {
+    "host": "localhost",
+    "user": "root",
+    "pass": "mytaraxa2019",
+    "name": "trade_log"
+  },
+  "db_history": {
+    "host": "localhost",
+    "user": "root",
+    "pass": "mytaraxa2019",
+    "name": "trade_history"
+  },
+  "assets": [
+    {
+      "name": "BCH",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "BTC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "LTC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ETH",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ETC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "ZEC",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "XMR",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "DSH",
+      "prec_save": 12,
+      "prec_show": 8
+    },
+    {
+      "name": "USDT",
+      "prec_save": 20,
+      "prec_show": 8
+    },
+    {
+      "name": "EOS",
+      "prec_save": 12,
+      "prec_show": 8
+    }
+  ],
+  "markets": [
+    {
+      "name": "BTCBCH",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "LTCBCH",
+      "stock": {
+        "name": "LTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETHBCH",
+      "stock": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ETCBCH",
+      "stock": {
+        "name": "ETC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "ZECBCH",
+      "stock": {
+        "name": "ZEC",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "XMRBCH",
+      "stock": {
+        "name": "XMR",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "DSHBCH",
+      "stock": {
+        "name": "DSH",
+        "prec": 8
+      },
+      "money": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "min_amount": "0.001"
+    },
+    {
+      "name": "BTCUSDT",
+      "stock": {
+        "name": "BTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "ETHUSDT",
+      "stock": {
+        "name": "ETH",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "EOSUSDT",
+      "stock": {
+        "name": "EOS",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "BCHUSDT",
+      "stock": {
+        "name": "BCH",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    },
+    {
+      "name": "LTCUSDT",
+      "stock": {
+        "name": "LTC",
+        "prec": 8
+      },
+      "money": {
+        "name": "USDT",
+        "prec": 8
+      },
+      "min_amount": "0.0001"
+    }
+  ],
+  "brokers": "127.0.0.1:9092",
+  "slice_interval": 3600,
+  "slice_keeptime": 259200
+}

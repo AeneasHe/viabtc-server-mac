@@ -1,0 +1,19 @@
+{
+  "process": {
+    "file_limit": 10000,
+    "core_limit": 100000
+  },
+  "log": {
+    "path": "/Users/aeneas/Github/exchange/viabtc-server-mac/bin/alertcenter/log",
+    "flag": "fatal,error,warn,info,debug"
+  },
+  "svr": {
+    "name": "alertcenter",
+    "bind": ["tcp@0.0.0.0:4444", "udp@0.0.0.0:4444"],
+    "max_pkg_size": 10240
+  },
+  "redis": {
+    "name": "redis-cluster",
+    "addr": ["127.0.0.1:16380", "127.0.0.1:16381", "127.0.0.1:16382"]
+  }
+}
